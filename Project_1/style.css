@@ -56,8 +56,8 @@ aside a {
 }
 
 main {
-  float: right; 
-  width: 75%;   
+  float: none; 
+  width: 100%; 
   box-sizing: border-box;
   padding: 15px;
 }
