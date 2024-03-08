@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма зворотного зв'язку</title>
+    <link rel="stylesheet" href="styles_form.css">
+
+</head>
+<body>
+    <form action="#" method="post">
+        <h1>Форма зворотного зв'язку</h1>
+        <p>Заповніть поля, щоб отримати зворотний зв'язок</p>
+            <hr>
+        <label>Номер телефону для зворотного зв'язку: <input type="tel" name="contact_number" placeholder="+380-98-1234-121" pattern="[0-9]{10}" required></label><br>
+        <label>Категорія:
+            <select name="category" required>
+                <option value="support">Підтримка</option>
+                <option value="wishes">Побажання</option>
+                <option value="complaint">Скарга</option>
+            </select>
+        </label><br>
+        <label>Тема: <input type="text" name="subject" required></label><br>
+        <label>Текст повідомлення: <textarea name="message" rows="2" cols="40" required></textarea></label><br>
+        <label>Прикріпити файл: <input type="file" name="attachment" accept=".jpg, .docx, .pdf"></label><br>
+        <label>Вибір способу для зворотного зв'язку:</label><br>
+        <label><input type="radio" name="contact_method" value="phone" required> Телефон</label><br>
+        <label><input type="radio" name="contact_method" value="email" required> Email</label><br>
+        <button type="submit">Надіслати</button>
+    </form>
+</body>
+</html>

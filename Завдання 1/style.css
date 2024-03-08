@@ -1,0 +1,106 @@
+body {
+  font-family: 'Arial';
+  line-height: 1.5;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+nav a {
+  color: #fff;
+  padding: 10px 15px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  nav a {
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+
+  main,
+  aside {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+
+  aside {
+    width: 100%; 
+    padding: 20px;
+  }
+}
+
+aside a {
+  color: #333;
+  font-weight: bold;
+}
+
+main {
+  float: right; 
+  width: 75%;   
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+main h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+article table {
+  width: 81.5%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  article table {
+    width: 60%; 
+  }
+}
+
+article th,
+article td {
+  border: 2px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+article th:hover,
+article td:hover {
+  background-color: #ddd;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
