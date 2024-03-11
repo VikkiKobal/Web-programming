@@ -6,6 +6,10 @@ body {
   background-color: cornsilk;
 }
 
+article ol{
+  max-width: 850px;
+}
+
 header{
   text-align: center;
   padding: 0px;
@@ -93,7 +97,7 @@ article table {
 
 @media (min-width: 768px) {
   article table {
-    width: 60%; 
+    width: 46%; 
   }
 }
 
