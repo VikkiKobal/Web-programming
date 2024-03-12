@@ -40,6 +40,11 @@ nav a {
 }
 
 @media (max-width: 767px) {
+  header img {
+    width: 100%; 
+    height: auto;     
+  }
+
   nav {
     flex-direction: column;
     align-items: center;
@@ -61,6 +66,12 @@ nav a {
   aside {
     width: 100%; 
     padding: 20px;
+  }
+
+  article table {
+    width: 270px; 
+    max-width: 270px; 
+    align-items: first baseline;
   }
 }
 
@@ -143,9 +154,8 @@ footer p {
   top: 0;
   left: 0;
   padding: 30px 15px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-  transition: 0.5s;
+  background: none;
+  border: none; 
   color: black;
 }
 
@@ -172,6 +182,8 @@ ul {
 .wrapper:hover aside a {
   display: block;
 }
+
+
 
 
 

@@ -1,0 +1,50 @@
+body {
+    background-image: url('https://i.pinimg.com/564x/79/5c/ab/795cabc4647f73b365e2e6eabd0f34dc.jpg');
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contact-form {
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, p {
+    text-align: center;
+    color: #555;
+}
+
+a {
+    color: #4caf50;
+}
+
+.contact-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-link a:hover {
+    background-color: #45a049;
+}
