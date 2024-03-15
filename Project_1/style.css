@@ -175,13 +175,16 @@ ul {
   background: url('https://cdn-icons-png.flaticon.com/512/660/660376.png') no-repeat center center / contain; 
 }
 
-.wrapper .menu-icon:hover + aside a {
+.wrapper:hover aside a {
   display: block;
 }
 
 .wrapper:hover {
   width: 250px;
 }
+
+
+
 
 
 
