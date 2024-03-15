@@ -4,7 +4,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   background-color: cornsilk;
-}S
+}
 
 article ol{
   max-width: 850px;
@@ -40,9 +40,12 @@ nav a {
 }
 
 @media (max-width: 767px) {
+  header {
+  background-color: whitesmoke;
+  }
+
   header img {
-    width: 100%; 
-    height: auto;     
+    visibility: hidden;
   }
 
   nav {
@@ -182,6 +185,8 @@ ul {
 .wrapper:hover {
   width: 250px;
 }
+
+
 
 
 
