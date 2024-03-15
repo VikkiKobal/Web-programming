@@ -136,18 +136,53 @@ footer {
 }
 
 
-footer p a img {
-  width: 20px; 
-  height: auto;
-  margin-left: 5px; 
+.footer-content {
+  text-align: center;
 }
 
-footer p {
-  font-family: 'Segoe UI';
+.footer-content h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.footer-content p {
   font-size: 16px;
-  color: #fff;
-  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.socials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socials li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.socials a img {
+  width: 40px; 
+  height: auto;
+  border-radius: 50%; 
+  transition: transform 0.3s ease;
+}
+
+.socials a img:hover {
+  transform: scale(1.1); 
+}
+
+.footer-bottom {
   text-align: center;
+  margin-top: 40px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+}
+
+.footer-bottom span {
+  font-weight: bold;
 }
 
 .wrapper {
@@ -185,24 +220,5 @@ ul {
 .wrapper:hover {
   width: 250px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
