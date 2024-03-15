@@ -4,7 +4,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   background-color: cornsilk;
-}
+}S
 
 article ol{
   max-width: 850px;
@@ -175,13 +175,20 @@ ul {
   background: url('https://cdn-icons-png.flaticon.com/512/660/660376.png') no-repeat center center / contain; 
 }
 
+.wrapper .menu-icon:hover + aside a {
+  display: block;
+}
+
 .wrapper:hover {
   width: 250px;
 }
 
-.wrapper:hover aside a {
-  display: block;
-}
+
+
+
+
+
+
 
 
 
