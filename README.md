@@ -8,12 +8,4 @@
 
 Завдання 5. Вивести на екран
 
-A B C D E
-
-B C D E F
-
-C D E F G
-
-D E F G H
-
-E F G H I
+![image](https://github.com/VikkiKobal/Labs_js/assets/161163769/34fec499-1482-4d36-81b3-5fac3d796577)
