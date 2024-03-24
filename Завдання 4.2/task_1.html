@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1</title>
+</head>
+<body>
+    <script>
+    function countEven(arrayOfNums) {
+        let count = 0;
+        for (let number of arrayOfNums) {
+            if (number % 2 === 0) {
+                count++;
+             }
+        }
+        return count;
+    }
+const evenCount = countEven([1, 2, 3, 4, 5]);
+alert("Кількість парних чисел = " + evenCount);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2</title>
+</head>
+<body>
+    <script>
+        function getClasses(dayName) {
+            const schedule = {
+                "понеділок": ["Дискретна математика", "С#", "Геометрія"],
+                "вівторок": ["Управління проектами", "C#", "Управління проектами"],
+                "середа": ["Англійська", "Англійська", "Матаналіз"],
+                "четвер": ["Дискретна математика", "C#", "Геометрія"],
+                "п'ятниця": ["Веб-програмування", "Матаналіз"],
+                "субота": ["Вихідний"],
+                "неділя": ["Вихідний"]
+            };
+        
+            if (dayName.toLowerCase() in schedule) {
+                return schedule[dayName.toLowerCase()];
+            } else {
+                return "Введено некоректні дані. Спробуйте ще раз!";
+            }
+        }
+        let dayName = prompt("Введіть день тижня:");
+        alert(`Розклад на ${dayName}: ${getClasses(dayName)}`);
+        </script>
+</body>
+</html>
