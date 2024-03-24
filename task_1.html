@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1</title>
+</head>
+<body>
+    <script>
+        function sumDigits(number) {
+            var num = number.toString();
+            var sum = 0;
+
+            for (var i = 1; i < num.length - 1; i++) {
+                sum += parseInt(num[i]);
+            }
+            return sum;
+        }
+        let number = prompt('Введіть  число: ');
+        alert("Сума цифр між першою та останньою цифрою числа " + number + ' = ' + sumDigits(number));
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 5</title>
+</head>
+<body>
+    <script>
+        function getLetters(rows) {
+            let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            let result = '';
+            for (let i = 0; i < rows; i++) {
+                for (let j = i; j < i + rows; j++) {
+                    result += alphabet[j] + ' ';
+                }
+                result += '\n';
+            }
+            alert(result);
+        }
+        getLetters(6);
+    </script>
+</body>
+</html>

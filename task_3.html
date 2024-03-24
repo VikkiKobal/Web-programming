@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 3</title>
+</head>
+<body>
+    <script>
+        function sumOfNumbersInRange(startRange, endRange) {
+            let sum = 0;
+
+            for (let i = startRange; i <= endRange; i++) {
+                if (i % 2 !== 0) {
+                    sum += i;
+                }
+            }
+            return sum; 
+        }
+        let start = parseInt(prompt("Введіть початок діапазону: "));
+        let end = parseInt(prompt("Введіть кінець діапазону: "));
+        alert("Сума цілих непарних чисел у заданому діапазоні = " + sumOfNumbersInRange(start, end));
+    </script>
+</body>
+</html>

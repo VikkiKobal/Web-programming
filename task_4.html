@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 4</title>
+</head>
+<body>
+    <script>
+        function calculateGymStats() {
+            let totalVisitors = parseInt(prompt("Скільки людей відвідало спортзал за день?"));
+            let totalAge = 0;
+            let youngestAge;
+            let oldestAge;
+
+            for (let i = 0; i < totalVisitors; i++) {
+                let age = parseInt(prompt("Введіть вік відвідувача " + (i + 1) + ":"));
+                if (age <= 0) {
+                    alert("Введіть коректне значення!");
+                }
+
+                totalAge += age;
+
+                if (i === 0) {
+                    youngestAge = age;
+                    oldestAge = age;}
+                else {
+                    if (age < youngestAge) {
+                        youngestAge = age;}
+                    if (age > oldestAge) {
+                        oldestAge = age;}
+                }
+            }
+            let averageAge = totalAge / totalVisitors;
+            alert(`Наймолодшому відвідувачу — ${youngestAge} років.\nНайстаршому — ${oldestAge} років.\nСередній вік відвідувачів: ${averageAge.toFixed(2)} років.`);
+        }
+        calculateGymStats();
+    </script>
+</body>
+</html>
