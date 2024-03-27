@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Завдання 1</title>
+</head>
+<body>
+    <script>
+  function getCategory(grades) {
+    if (grades.every(grade => grade === 5)) {
+        return "Відмінник";
+    } else if (grades.includes(2)) {
+        return "Двійочник";
+    } else if (grades.every(grade => grade >= 4)) {
+        return "Хорошист";
+    } else if (grades.includes(3)) {
+        return "Трійочник";
+    }
+}
+const grades = [5, 3, 5, 2, 5];
+let sum = grades.reduce((suma, grade) => suma + grade, 0);
+let average = sum / grades.length;
+
+alert("Сума: " + sum + "\nСередня оцінка: " + average + "\nКатегорія: " + getCategory(grades));
+        </script>        
+</body>
+</html>

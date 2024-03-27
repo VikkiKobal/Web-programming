@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2</title>
+</head>
+<body>
+    <script>
+        let visitors = [25, 17, 22, 30, 29, 25, 18];
+
+        function lessThanTwentyVisitors(visitors) {
+            let days = [];
+            for (let i = 0; i < visitors.length; i++) {
+                if (visitors[i] < 20) {
+                    days.push({ day: i + 1, visitors: visitors[i] });}
+            } return days;
+         }
+
+        function findMinDay(visitors) {
+            let minDay = -1;
+            let minValue = Number.MAX_VALUE;
+            for (let i = 0; i < visitors.length; i++) {
+                if (visitors[i] < minValue) {
+                    minValue = visitors[i];
+                    minDay = i + 1;}
+            }return minDay;
+        }
+
+        function findMaxDay(visitors) {
+            let maxDay = -1;
+            let maxValue = Number.MIN_VALUE;
+            for (let i = 0; i < visitors.length; i++) {
+                if (visitors[i] > maxValue) {
+                    maxValue = visitors[i];
+                    maxDay = i + 1;}
+            } return maxDay;
+        }
+
+        function findTotalVisitorsInWorkingDays(visitors) {
+            let total = 0;
+            for (let i = 0; i < 5; i++) {
+                total += visitors[i];
+            } return total;
+        }
+
+        function findTotalVisitorsInWeekendDays(visitors) {
+            let total = 0;
+            for (let i = 5; i < 7; i++) {
+                total += visitors[i];
+            } return total;
+        }
+
+        alert('Дні з менше ніж 20 відвідувачами: ' + lessThanTwentyVisitors(visitors).map(day => `День ${day.day} (${day.visitors} відвідувачів)`).join(', '));
+        alert('День з мінімальною кількістю відвідувачів: ' + findMinDay(visitors));
+        alert('День з максимальною кількістю відвідувачів: ' + findMaxDay(visitors));
+        alert('Загальна кількість відвідувачів у робочі дні: ' + findTotalVisitorsInWorkingDays(visitors));
+        alert('Загальна кількість відвідувачів у вихідні дні: ' + findTotalVisitorsInWeekendDays(visitors));
+    </script>
+</body>
+</html>

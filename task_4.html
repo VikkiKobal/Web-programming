@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 4</title>
+</head>
+<body>
+  <script>
+    const prizeFund = [];
+    for (let i = 0; i < 10; i++) {
+      prizeFund.push(Math.floor(Math.random() * 1001) - 500);
+    }
+  
+    let totalWin = 0; 
+    alert("Початковий призовий фонд: " + prizeFund.join(", "));
+  
+    function getPlayerChoice() {
+      let chosenElement;
+      do {
+        chosenElement = parseInt(prompt("Введіть номер елементу:"));
+        if (isNaN(chosenElement) || chosenElement < 0 || chosenElement >= prizeFund.length) {
+          alert("Некоректний номер елементу!");
+        }
+      } while (isNaN(chosenElement) || chosenElement < 0 || chosenElement >= prizeFund.length);
+      return chosenElement;
+    }
+ 
+    while (true) {
+      let chosenElement = getPlayerChoice(); 
+      if (prizeFund[chosenElement] !== undefined) { 
+        totalWin += prizeFund[chosenElement]; 
+        alert("Ви виграли " + prizeFund[chosenElement] + ". Загальний виграш: " + totalWin);
+        prizeFund[chosenElement] = undefined; 
+
+        let continueGame = confirm("Продовжити гру?");
+        if (!continueGame) {
+          break; 
+        }
+
+        if (prizeFund.every(el => el === undefined)) {
+          alert("Ви вже вибрали всі елементи!");
+          break; 
+        }
+      } else {
+        alert("Цей елемент вже був вибраний.");
+      }
+    }
+    alert("Загальний виграш: " + totalWin); 
+</script>
+</body>
+</html>
