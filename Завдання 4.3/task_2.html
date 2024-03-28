@@ -18,7 +18,7 @@
          }
 
         function findMinDay(visitors) {
-            let minDay = -1;
+            let minDay;
             let minValue = Number.MAX_VALUE;
             for (let i = 0; i < visitors.length; i++) {
                 if (visitors[i] < minValue) {
@@ -28,7 +28,7 @@
         }
 
         function findMaxDay(visitors) {
-            let maxDay = -1;
+            let maxDay;
             let maxValue = Number.MIN_VALUE;
             for (let i = 0; i < visitors.length; i++) {
                 if (visitors[i] > maxValue) {
