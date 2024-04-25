@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма авторизації</title>
+    <link rel="stylesheet" href="style_authorization.css">
+</head>
+<body>
+    <form action="#" method="post" onsubmit="return validateForm()">
+        <h1>Форма авторизації</h1>
+        <p>Заповніть поля, щоб авторизуватися</p>
+        <hr>
+
+        <label for="login"><b>Логін: </b></label>
+        <input type="text" placeholder="Введіть логін" name="login" id="login" required><br>
+
+        <label for="password"><b>Пароль: </b></label>
+        <input type="password" placeholder="Введіть пароль" name="psw" id="psw" required><br>
+
+        <label>
+            <input type="checkbox" name="accept" required>Залишатися в системі
+        </label><br>
+
+        <button type="submit">Увійти</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let login = document.getElementById("login").value;
+            let password = document.getElementById("psw").value;
+        
+            const usersLogin = ["username1", "username2", "username3"];
+            const usersPass = ["pass1", "pass2", "pass3"];
+
+            let loginIndex = usersLogin.indexOf(login);
+            let passIndex = usersPass.indexOf(password);
+
+            if (loginIndex == -1){
+                alert("Такого користувача не знайдено")
+            }
+
+            else {
+                if (password == usersPass[loginIndex]) {
+                    alert("Авторизація пройшла успішно!")}
+                else 
+                {
+                    alert("Паролі не співпадають!");
+                };
+            }}
+    </script>
+</body>
+</html>

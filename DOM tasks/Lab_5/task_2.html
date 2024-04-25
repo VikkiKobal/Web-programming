@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пошукова форма</title>
+    <link rel="stylesheet" href="style_task_2.css">
+</head>
+<body>
+    <h1>Пошукова форма</h1>
+    <p>Введіть назву предмета, який шукаєте:</p>
+    <input type="text" id="searchInput" placeholder="Введіть назву предмета">
+    <button id="searchButton">Шукати</button><br>
+    <div id="images"></div>
+
+    <script>
+        const items = [
+            { name: "Перець", url: "https://florium.ua/media/catalog/product/cache/1/file/9df78eab33525d08d6e5fb8d27136e95/p/e/perec__zhovtij_divosv_t.jpg" },
+            { name: "Капуста", url: "https://novus.online/uploads/10/50775-2856475.jpg" },
+            { name: "Буряк", url: "https://rivne1.tv/pics2/2005/i114039.jpg?1590734478" },
+            { name: "Помідор", url: "https://cooker.net.ua/upload/iblock/12a/pomidor-500-600g-1033.jpg"}
+        ];
+
+        let searchInput = document.getElementById("searchInput");
+        let imageContainer = document.getElementById("images");
+        let searchButton = document.getElementById("searchButton");
+
+        searchButton.addEventListener("click", function(){
+            let searchItem = searchInput.value.toLowerCase();
+            let matchingItems = items.filter(item => item.name.toLowerCase() == searchItem);
+
+            imageContainer.innerHTML = "";
+            
+            if (matchingItems.length == 0) {
+                let result = document.createElement("p");
+                result.textContent = "За вашим запитом не знайдено результатів!";
+                imageContainer.appendChild(result);
+            } else {
+                matchingItems.forEach(item => {
+                    const img = document.createElement("img");
+                    img.src = item.url;
+                    img.alt = item.name;
+                    img.style.maxWidth = "300px";
+                    imageContainer.appendChild(img);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

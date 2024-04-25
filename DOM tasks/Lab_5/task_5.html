@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренажер арифметичних операцій</title>
+    <link rel="stylesheet" href="task_5.css">
+</head>
+<body>
+    <label for="Number 1"><b>Перше число: </b></label>
+    <input type="number" name="number1" id="number1" required><br>
+
+    <label for="Operations"><b>Операція: </b></label>
+    <input type="text" name="operation" id="operationSign" readonly><br>
+
+    <label for="Number 2"><b>Друге число: </b></label>
+    <input type="number" name="number2" id="number2" required><br>
+    <hr>
+
+    <label for="Result"><b>Ваша відповідь: </b></label>
+    <input type="number" name="result" id="result" required><br>
+
+    <button type="button" id="checkButton">Перевірити</button><br>
+    <label for="Result"><b>Результат: </b></label>
+    <p id="usersResult"></p>
+
+    <script>
+        function generateRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function generateRandomOperation() {
+            const operations = ['+', '-', '*', '/'];
+            return operations[Math.floor(Math.random() * operations.length)];
+        }
+
+        function getResult(a, b, operation) {
+            switch (operation) {
+                case '+':
+                    return a + b;
+                case '-':
+                    return a - b;
+                case '*':
+                    return a * b;
+                case '/':
+                    return a / b;
+            }
+        }
+
+        function checkAnswer(a, b, operation, userResult) {
+            let result = getResult(a, b, operation);
+            let usersResult = document.getElementById('usersResult');
+            if (result === userResult) {
+                usersResult.textContent = 'Правильно!';
+            } else {
+                usersResult.textContent = 'Спробуйте ще раз!';
+            }
+        }
+        
+            let number1 = document.getElementById('number1');
+            let operationSign = document.getElementById('operationSign');
+            let number2 = document.getElementById('number2');
+            let result = document.getElementById('result');
+            let checkButton = document.getElementById('checkButton');
+
+            number1.value = generateRandomNumber(1, 100);
+            operationSign.value = generateRandomOperation();
+            number2.value = generateRandomNumber(1, 100);
+
+            checkButton.addEventListener('click', function () {
+                checkAnswer(+number1.value, +number2.value, operationSign.value, +result.value);
+            });
+    </script>
+</body>
+</html>
