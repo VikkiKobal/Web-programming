@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 3</title>
+</head>
+<body>
+    <script>
+        function Company(code, name, numberOfEmployees, industry, address) {
+            this.code = code;
+            this.name = name;
+            this.numberOfEmployees = numberOfEmployees;
+            this.industry = industry;
+            this.address = address;
+        }
+
+        Company.prototype.getFullInformation = function() {
+            return "Code: " + this.code + ", Name: " + this.name + ", Number of Employees: " + this.numberOfEmployees + ", Industry: " + this.industry + ", Address: " + this.address;
+        };
+
+        let company1 = new Company("1234", "ABC Corporation", 1000, "Technology", "123 Tech St");
+        console.log(company1.getFullInformation());
+    </script>
+</body>
+</html>

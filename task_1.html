@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1</title>
+</head>
+<body>
+    <script>
+        function Accounting(code, firstname, lastname, position, salary, childrensNum, experience){
+            this.code = code;
+            this.firstname = firstname; 
+            this.lastname = lastname;
+            this.position = position;
+            this.salary = salary;
+            this.childrensNum = childrensNum;
+            this.experience = experience;
+        }
+
+        Accounting.prototype.getFullInformation = function() {
+            return this.firstname + " " + this.lastname + " — code " + this.code + 
+                   " has position — " + this.position + ", salary = " + this.salary + " with experience = " + this.experience + " yers" + 
+                   ", children number = " + this.childrensNum;
+        }
+
+        let accounter = new Accounting(123, 'John', 'Smith', 'manager', 2300, 1, 5);
+        console.log(accounter.getFullInformation());
+        
+    </script>
+</body>
+</html>
