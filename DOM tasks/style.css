@@ -1,0 +1,37 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    text-align: center;
+    color: #240A34;
+}
+
+.current-date {
+    color: #D04848;
+}
+
+.table {
+    border-spacing:0;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;   
+}
+
+.table-header {
+    font-size: 20px;
+    background-color: #35374B;
+    color: #FFF;   
+}
+
+th, td {
+    padding: 20px;
+}
+
+.row:nth-child(odd) {
+    background-color: #F2EFE5;
+}
+
+.row:nth-child(even) {
+    background-color: #E3E1D9;
+}
