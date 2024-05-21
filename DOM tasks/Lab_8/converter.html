@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="stylesheet" href="converter.css">
+</head>
+<body>
+    <h1 class="title">&#128176; Конвертер валют</h1>
+    <label for="oamount">Amount to Convert : </label>
+    <input type="text" class="searchBox" placeholder="0.00" id="oamount">
+    <br>
+    <span class="input-text">From</span>
+    <select class="from" id="sel1">
+        <option value="AUD">AUD</option>
+        <option value="CAD">CAD</option>
+        <option value="CNY">CNY</option>
+        <option value="CZK">CZK</option>
+        <option value="DKK">DKK</option>
+    </select>
+    <br>
+    <span class="input-text">To</span>
+    <select class="form to" id="sel2">
+        <option value="AUD">AUD</option>
+        <option value="CAD">CAD</option>
+        <option value="CNY">CNY</option>
+        <option value="CZK">CZK</option>
+        <option value="DKK">DKK</option>
+    </select>
+    <br>
+    <button class="btn btn-primary convert m-2" type="submit">Convert</button>
+    <h2>Converted Amount : <span class="finalValue" style="color:green;"></span></h2>
+    <script src="converter.js"></script>
+</body>
+</html>
